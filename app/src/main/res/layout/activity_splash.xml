@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/splashConsLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/paddingDefault">
+
+        <ImageView
+            android:id="@+id/tvs_logo"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/marginDefault"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/tvs_logo" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/paddingDefault">
+
+
+            <ImageView
+                android:id="@+id/splashImageview"
+                android:layout_width="wrap_content"
+                android:layout_height="270dp"
+                android:padding="@dimen/paddingDefault"
+                android:scaleType="centerInside"
+                android:src="@drawable/splashscreen" />
+
+            <TextView
+                android:id="@+id/tv_versionCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/splashImageview"
+                android:layout_centerHorizontal="true"
+                android:text="@string/versioncode"
+                android:textAppearance="@style/TextAppearance"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_mediam" />
+
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_below="@+id/tv_versionCode"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_xxlarge"
+                android:indeterminateDrawable="@drawable/custom_progressbar"></ProgressBar>
+
+            <TextView
+                android:id="@+id/tvConnecting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/progress"
+                android:layout_centerHorizontal="true"
+                android:text="Connecting..."
+                android:textAppearance="@style/TextAppearance"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/dbtxtViewTextSize" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_copyrights"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="bottom|center"
+            android:text="@string/copyrights"
+            android:textAppearance="@style/TextAppearance"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_mediam" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

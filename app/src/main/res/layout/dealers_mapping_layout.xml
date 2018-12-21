@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/dealersMain_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/dealersHeader_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary">
+
+            <TextView
+                android:id="@+id/sourceTextView"
+                style="?android:attr/listSeparatorTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="start"
+                android:layout_marginLeft="@dimen/marginDefault"
+                android:layout_weight="60"
+                android:text="@string/select_channel"
+                android:textAppearance="@style/TextAppearance"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/dismiss"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/marginDefault"
+                android:layout_weight="8"
+                app:srcCompat="@drawable/ic_close_button" />
+
+        </RelativeLayout>
+
+        <!--  <SearchView
+              android:layout_below="@+id/dealersHeader_layout"
+              android:id="@+id/searchView1"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:iconifiedByDefault="false"
+              android:textAppearance="@style/TextAppearance"
+              android:queryHint="@string/search_channel">
+
+          </SearchView>-->
+
+        <android.support.v7.widget.SearchView
+            android:id="@+id/searchView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dealersHeader_layout"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/textSizeDefault"
+            app:iconifiedByDefault="false"
+            app:queryHint="@string/search" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mRecyerID"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_below="@+id/searchView1">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <Button
+            android:id="@+id/btnSumbit"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/mRecyerID"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/marginDefault"
+            android:background="@drawable/button_normal"
+            android:padding="@dimen/paddingDefault"
+            android:text="@string/submit"
+            android:textAppearance="@style/TextAppearance"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

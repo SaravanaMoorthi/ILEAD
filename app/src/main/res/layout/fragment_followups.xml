@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/fragmentFollowups_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cardView1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/marginDefault">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/marginDefault"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/followAction_textView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/followups_action"
+                                android:textAppearance="@style/TextAppearance"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/textSizeDefault"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/edtSpnrPadding"
+                                android:gravity="bottom"
+                                android:orientation="vertical">
+
+                                <android.support.v7.widget.AppCompatSpinner
+                                    android:id="@+id/followupAction_spinner"
+                                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingBottom="@dimen/edtSpnrPadding"
+                                    android:paddingLeft="2dp"
+                                    android:paddingRight="2dp"
+                                    android:paddingTop="@dimen/edtSpnrPadding"
+                                    android:textAppearance="@style/TextAppearance"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="@dimen/textSizeDefault"
+                                    app:backgroundTint="@color/colorText" />
+
+                                <android.support.v7.widget.AppCompatSpinner
+                                    android:id="@+id/actionResult_spinner"
+                                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingBottom="@dimen/edtSpnrPadding"
+                                    android:paddingLeft="2dp"
+                                    android:paddingRight="2dp"
+                                    android:paddingTop="@dimen/edtSpnrPadding"
+                                    android:textAppearance="@style/TextAppearance"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="@dimen/textSizeDefault"
+                                    app:backgroundTint="@color/colorText" />
+
+                                <android.support.v7.widget.AppCompatSpinner
+                                    android:id="@+id/nextAction_spinner"
+                                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingBottom="@dimen/edtSpnrPadding"
+                                    android:paddingLeft="2dp"
+                                    android:paddingRight="2dp"
+                                    android:paddingTop="@dimen/edtSpnrPadding"
+                                    android:textAppearance="@style/TextAppearance"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="@dimen/textSizeDefault"
+                                    app:backgroundTint="@color/colorText" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/edtSpnrPadding"
+                                android:gravity="bottom"
+                                android:orientation="horizontal">
+
+                                <EditText
+                                    android:id="@+id/actionDate_editText"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="@dimen/edtSpnrPadding"
+                                    android:layout_weight="50"
+                                    android:backgroundTint="@color/textColor"
+                                    android:drawablePadding="@dimen/marginDefault"
+                                    android:drawableRight="@drawable/ic_calendar"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"
+                                    android:hint="@string/followups_actiondate"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="datetime"
+                                    android:paddingBottom="@dimen/edtSpnrPadding"
+                                    android:textAppearance="@style/TextAppearance"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textCursorDrawable="@drawable/custom_cursor"
+                                    android:textSize="@dimen/textSizeDefault" />
+
+                                <android.support.v7.widget.AppCompatSpinner
+                                    android:id="@+id/actionTime_spinner"
+                                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="50"
+                                    android:paddingBottom="@dimen/edtSpnrPadding"
+                                    android:paddingLeft="2dp"
+                                    android:paddingRight="2dp"
+                                    android:paddingTop="@dimen/edtSpnrPadding"
+                                    android:textAppearance="@style/TextAppearance"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="@dimen/textSizeDefault"
+                                    app:backgroundTint="@color/colorText" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cardView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/marginDefault"
+                        android:layout_marginLeft="@dimen/marginDefault"
+                        android:layout_marginRight="@dimen/marginDefault">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/marginDefault"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/followupStatus_textView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/followups_status"
+                                android:textAppearance="@style/TextAppearance"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/textSizeDefault"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/marginDefault"
+                                android:gravity="bottom"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="bottom"
+                                    android:orientation="horizontal">
+
+                                    <EditText
+                                        android:id="@+id/status_editText"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="@dimen/marginDefault"
+                                        android:layout_weight="50"
+                                        android:backgroundTint="@color/textColor"
+                                        android:hint="@string/followups_status"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="phone"
+                                        android:paddingBottom="@dimen/margin_small"
+                                        android:paddingRight="@dimen/edtSpnrPadding"
+                                        android:textAppearance="@style/TextAppearance"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textCursorDrawable="@drawable/custom_cursor"
+                                        android:textSize="@dimen/textSizeDefault" />
+
+                                    <android.support.v7.widget.AppCompatSpinner
+                                        android:id="@+id/spinerleadstatus"
+                                        style="@style/Widget.AppCompat.Spinner.Underlined"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="50"
+                                        android:paddingBottom="@dimen/edtSpnrPadding"
+                                        android:paddingLeft="2dp"
+                                        android:paddingRight="2dp"
+                                        android:paddingTop="@dimen/edtSpnrPadding"
+                                        android:textAppearance="@style/TextAppearance"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textSize="@dimen/textSizeDefault"
+                                        app:backgroundTint="@color/colorText" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="bottom"
+                                    android:orientation="vertical">
+
+                                    <EditText
+                                        android:id="@+id/statusNo_editText"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="@dimen/marginDefault"
+                                        android:backgroundTint="@color/textColor"
+                                        android:hint="@string/followups_scempno"
+                                        android:inputType="phone"
+                                        android:maxLines="1"
+                                        android:textAppearance="@style/TextAppearance"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textCursorDrawable="@drawable/custom_cursor"
+                                        android:textSize="@dimen/textSizeDefault"
+                                        android:visibility="gone" />
+
+                                    <EditText
+                                        android:id="@+id/prospectNo_editText"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="@dimen/marginDefault"
+                                        android:backgroundTint="@color/textColor"
+                                        android:hint="@string/followups_prospectno"
+                                        android:inputType="textNoSuggestions"
+                                        android:paddingBottom="@dimen/margin_small"
+                                        android:textAppearance="@style/TextAppearance"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textCursorDrawable="@drawable/custom_cursor"
+                                        android:textSize="@dimen/textSizeDefault" />
+
+                                    <EditText
+                                        android:id="@+id/agreementNo_editText"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="@dimen/marginDefault"
+                                        android:layout_weight="50"
+                                        android:backgroundTint="@color/textColor"
+                                        android:hint="@string/followups_agreementno"
+                                        android:imeOptions="actionDone"
+                                        android:inputType="phone"
+                                        android:maxLines="1"
+                                        android:paddingBottom="@dimen/margin_small"
+                                        android:textAppearance="@style/TextAppearance"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textCursorDrawable="@drawable/custom_cursor"
+                                        android:textSize="@dimen/textSizeDefault" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:layout_marginTop="@dimen/marginDefault"
+                        android:layout_marginBottom="@dimen/marginDefault"
+                        android:gravity="center|bottom"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <Button
+                            android:id="@+id/btnSave"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|bottom"
+                            android:layout_marginRight="@dimen/paddingDefault"
+                            android:layout_weight="1"
+                            android:background="@drawable/button_normal"
+                            android:text="@string/save"
+                            android:textAppearance="@style/TextAppearance"
+                            android:textColor="@color/white" />
+
+                        <Button
+                            android:id="@+id/btnSumbit"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|bottom"
+                            android:layout_marginLeft="@dimen/paddingDefault"
+                            android:layout_weight="1"
+                            android:background="@drawable/button_normal"
+                            android:text="@string/submit"
+                            android:textAppearance="@style/TextAppearance"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:src="@mipmap/eye"
+                app:backgroundTint="@color/floatingOrange"
+                app:layout_anchor="@id/cardView2"
+                app:layout_anchorGravity="bottom|end" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_gravity="bottom|start"
+                android:fitsSystemWindows="true"
+                app:behavior_hideable="false"
+                app:behavior_peekHeight="0dp"
+                app:layout_behavior="@string/bottom_sheet_behavior">
+
+                <include
+                    android:id="@+id/followup_bottom_sheet"
+                    layout="@layout/bottom_sheets_main" />
+
+            </FrameLayout>
+        </android.support.design.widget.CoordinatorLayout>
+    </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>

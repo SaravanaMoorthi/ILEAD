@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/text1"
+    style="?android:attr/spinnerItemStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:ellipsize="marquee"
+    android:paddingTop="@dimen/paddingDefault"
+    android:singleLine="true"
+    android:text="TVS Credit Services Limited"
+    android:textAlignment="inherit"
+    android:textAllCaps="false"
+    android:textAppearance="@style/TextAppearance"
+    android:textColor="@color/colorPrimary"
+    android:textSize="@dimen/textSizeDefault" />

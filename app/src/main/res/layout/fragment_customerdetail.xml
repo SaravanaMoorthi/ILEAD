@@ -1,0 +1,859 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/customerDetail_mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/layout_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:id="@+id/cutomerDetail_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/edtSpnrPadding"
+                android:background="@color/white"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/cutomerLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/marginDefault"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:elevation="8dp"
+                        app:cardPreventCornerOverlap="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/marginDefault"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/cutDetail_textView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/edtSpnrPadding"
+                                android:text="@string/customer_detail"
+                                android:textAppearance="@style/TextAppearance"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/textSizeDefault"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/edtSpnrPadding"
+                                android:gravity="bottom"
+                                android:orientation="horizontal">
+
+                                <android.support.v7.widget.AppCompatImageView
+                                    android:id="@+id/productImageView"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_marginRight="@dimen/marginDefault"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="fitCenter"
+                                    app:srcCompat="@drawable/ic_trans_auto" />
+
+                                <TextView
+                                    android:id="@+id/leadNo_textView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="@string/app_name"
+                                    android:textAppearance="@style/TextAppearance"
+                                    android:textColor="@color/floatingOrange"
+                                    android:textSize="@dimen/textSizeDefault"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:baselineAligned="false"
+                                android:gravity="center|bottom"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <EditText
+                                    android:id="@+id/cusName_editText"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="@dimen/marginDefault"
+                                    android:layout_weight="1"
+                                    android:backgroundTint="@color/textColor"
+                                    android:hint="@string/customer_name"
+                                    android:inputType="textCapCharacters"
+                                    android:paddingBottom="@dimen/margin_small"
+                                    android:textAppearance="@style/TextAppearance"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textCursorDrawable="@drawable/custom_cursor"
+                                    android:textSize="@dimen/textSizeDefault" />
+
+                                <android.support.v7.widget.AppCompatSpinner
+                                    android:id="@+id/cusProfile_spinner"
+                                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:paddingBottom="@dimen/edtSpnrPadding"
+                                    android:paddingLeft="2dp"
+                                    android:paddingRight="2dp"
+                                    android:paddingTop="@dimen/edtSpnrPadding"
+                                    android:textAppearance="@style/TextAppearance"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="@dimen/textSizeDefault"
+                                    app:backgroundTint="@color/textColor" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/edtSpnrPadding"
+                                android:baselineAligned="false"
+                                android:gravity="center|bottom"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <EditText
+                                    android:id="@+id/cusNo_editText"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="@dimen/marginDefault"
+                                    android:layout_weight="1"
+                                    android:backgroundTint="@color/textColor"
+                                    android:hint="@string/mobile_number"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="phone"
+                                    android:maxLength="13"
+                                    android:paddingBottom="@dimen/margin_small"
+                                    android:textAppearance="@style/TextAppearance"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textCursorDrawable="@drawable/custom_cursor"
+                                    android:textSize="@dimen/textSizeDefault" />
+
+                                <EditText
+                                    android:id="@+id/cusAlterNo_editText"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:backgroundTint="@color/textColor"
+                                    android:hint="@string/alter_mobile_number"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="phone"
+                                    android:maxLength="13"
+                                    android:maxLines="1"
+                                    android:paddingBottom="@dimen/margin_small"
+                                    android:textAppearance="@style/TextAppearance"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textCursorDrawable="@drawable/custom_cursor"
+                                    android:textSize="@dimen/textSizeDefault" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/edtSpnrPadding"
+                                android:baselineAligned="false"
+                                android:gravity="center|bottom"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <EditText
+                                    android:id="@+id/cusAdd1_editText"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="@dimen/marginDefault"
+                                    android:layout_weight="1"
+                                    android:backgroundTint="@color/textColor"
+                                    android:hint="@string/customer_address1"
+                                    android:inputType="textCapCharacters"
+                                    android:paddingBottom="@dimen/margin_small"
+                                    android:textAppearance="@style/TextAppearance"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textCursorDrawable="@drawable/custom_cursor"
+                                    android:textSize="@dimen/textSizeDefault" />
+
+                                <EditText
+                                    android:id="@+id/cusAdd2_editText"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:backgroundTint="@color/textColor"
+                                    android:hint="@string/customer_address2"
+                                    android:inputType="textCapCharacters"
+                                    android:paddingBottom="@dimen/margin_small"
+                                    android:textAppearance="@style/TextAppearance"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textCursorDrawable="@drawable/custom_cursor"
+                                    android:textSize="@dimen/textSizeDefault" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_large"
+                                android:baselineAligned="false"
+                                android:gravity="center|bottom"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <android.support.v7.widget.AppCompatSpinner
+                                    android:id="@+id/cusState_spinner"
+                                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/margin_large"
+                                    android:layout_marginRight="@dimen/marginDefault"
+                                    android:layout_weight="1"
+                                    android:backgroundTint="@color/textColor"
+                                    android:paddingBottom="@dimen/edtSpnrPadding"
+                                    android:paddingLeft="2dp"
+                                    android:paddingRight="2dp"
+                                    android:paddingTop="@dimen/edtSpnrPadding"
+                                    android:textAppearance="@style/TextAppearance"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="@dimen/textSizeDefault" />
+
+                                <android.support.v7.widget.AppCompatSpinner
+                                    android:id="@+id/custCity_spinner"
+                                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/margin_large"
+                                    android:layout_weight="1"
+                                    android:backgroundTint="@color/textColor"
+                                    android:paddingBottom="@dimen/edtSpnrPadding"
+                                    android:paddingLeft="2dp"
+                                    android:paddingRight="2dp"
+                                    android:paddingTop="@dimen/edtSpnrPadding"
+                                    android:textAppearance="@style/TextAppearance"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="@dimen/textSizeDefault" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:baselineAligned="false"
+                                android:gravity="center|bottom"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <android.support.v7.widget.AppCompatSpinner
+                                    android:id="@+id/cusTaluk_spinner"
+                                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/margin_large"
+                                    android:layout_marginRight="@dimen/marginDefault"
+                                    android:layout_weight="1"
+                                    android:paddingBottom="@dimen/edtSpnrPadding"
+                                    android:paddingLeft="2dp"
+                                    android:paddingRight="2dp"
+                                    android:paddingTop="@dimen/edtSpnrPadding"
+                                    android:textAppearance="@style/TextAppearance"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="@dimen/textSizeDefault"
+                                    app:backgroundTint="@color/colorText" />
+
+                                <EditText
+                                    android:id="@+id/cusPincode_editText"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:backgroundTint="@color/textColor"
+                                    android:hint="@string/pincode"
+                                    android:inputType="textCapCharacters"
+                                    android:paddingBottom="@dimen/margin_small"
+                                    android:textAppearance="@style/TextAppearance"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textCursorDrawable="@drawable/custom_cursor"
+                                    android:textSize="@dimen/textSizeDefault" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:baselineAligned="false"
+                                android:gravity="center|bottom"
+                                android:orientation="horizontal">
+
+                                <android.support.v7.widget.AppCompatSpinner
+                                    android:id="@+id/cusResiStatus_spinner"
+                                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingBottom="@dimen/edtSpnrPadding"
+                                    android:paddingLeft="2dp"
+                                    android:paddingRight="2dp"
+                                    android:paddingTop="@dimen/edtSpnrPadding"
+                                    android:textAppearance="@style/TextAppearance"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="@dimen/textSizeDefault"
+                                    app:backgroundTint="@color/colorText" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/vehicleLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/marginDefault"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:elevation="8dp"
+                        app:cardPreventCornerOverlap="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/marginDefault"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/vechileDetail_textView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/edtSpnrPadding"
+                                android:text="@string/vehicle_detail"
+                                android:textAppearance="@style/TextAppearance"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/textSizeDefault"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:baselineAligned="false"
+                                android:gravity="center|bottom"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <android.support.v7.widget.AppCompatSpinner
+                                    android:id="@+id/manufacturedYear_spinner"
+                                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="@dimen/marginDefault"
+                                    android:layout_marginTop="@dimen/edtSpnrPadding"
+                                    android:layout_weight="1"
+                                    android:paddingBottom="@dimen/edtSpnrPadding"
+                                    android:paddingLeft="2dp"
+                                    android:paddingRight="2dp"
+                                    android:paddingTop="@dimen/edtSpnrPadding"
+                                    android:textAppearance="@style/TextAppearance"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="@dimen/textSizeDefault"
+                                    app:backgroundTint="@color/colorText" />
+
+                                <android.support.v7.widget.AppCompatSpinner
+                                    android:id="@+id/make_spinner"
+                                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/edtSpnrPadding"
+                                    android:layout_weight="1"
+                                    android:paddingBottom="@dimen/edtSpnrPadding"
+                                    android:paddingLeft="2dp"
+                                    android:paddingRight="2dp"
+                                    android:paddingTop="@dimen/edtSpnrPadding"
+                                    android:textAppearance="@style/TextAppearance"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="@dimen/textSizeDefault"
+                                    app:backgroundTint="@color/colorText" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:baselineAligned="false"
+                                android:gravity="center|bottom"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <android.support.v7.widget.AppCompatSpinner
+                                    android:id="@+id/model_spinner"
+                                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="@dimen/marginDefault"
+                                    android:layout_marginTop="@dimen/edtSpnrPadding"
+                                    android:layout_weight="1"
+                                    android:paddingBottom="@dimen/edtSpnrPadding"
+                                    android:paddingLeft="2dp"
+                                    android:paddingRight="2dp"
+                                    android:paddingTop="@dimen/edtSpnrPadding"
+                                    android:textAppearance="@style/TextAppearance"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="@dimen/textSizeDefault"
+                                    app:backgroundTint="@color/colorText" />
+
+                                <android.support.v7.widget.AppCompatSpinner
+                                    android:id="@+id/variant_spinner"
+                                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/edtSpnrPadding"
+                                    android:layout_weight="1"
+                                    android:paddingBottom="@dimen/edtSpnrPadding"
+                                    android:paddingLeft="2dp"
+                                    android:paddingRight="2dp"
+                                    android:paddingTop="@dimen/edtSpnrPadding"
+                                    android:textAppearance="@style/TextAppearance"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="@dimen/textSizeDefault"
+                                    app:backgroundTint="@color/colorText" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/edtSpnrPadding"
+                                android:gravity="bottom|center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/edtSpnrPadding"
+                                    android:layout_weight="30"
+                                    android:text="@string/vehicle_finalized"
+                                    android:textAppearance="@style/TextAppearance"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="@dimen/textSizeDefault"
+                                    android:theme="@style/switchCustomStyle" />
+
+                                <android.support.v7.widget.SwitchCompat
+                                    android:id="@+id/cusVehicaleFinance_switch"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="@dimen/marginDefault"
+                                    android:layout_weight="20"
+                                    android:button="@drawable/switchbtn_custom"
+                                    android:paddingLeft="@dimen/edtSpnrPadding"
+                                    android:paddingRight="@dimen/edtSpnrPadding"
+                                    android:thumb="@null"
+                                    app:track="@null" />
+
+                                <EditText
+                                    android:id="@+id/vehicleRegNo_editText"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/marginDefault"
+                                    android:layout_weight="50"
+                                    android:backgroundTint="@color/textColor"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:maxLength="10"
+                                    android:maxLines="1"
+                                    android:singleLine="true"
+                                    android:textAllCaps="true"
+                                    android:hint="@string/vehicle_regno"
+                                    android:inputType="textNoSuggestions"
+                                    android:paddingBottom="@dimen/margin_small"
+                                    android:textAppearance="@style/TextAppearance"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textCursorDrawable="@drawable/custom_cursor"
+                                    android:textSize="@dimen/textSizeDefault" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/loanLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/marginDefault"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:elevation="8dp"
+                        app:cardPreventCornerOverlap="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/marginDefault"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/loanDetail_textView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/edtSpnrPadding"
+                                android:text="@string/loan_detail"
+                                android:textAppearance="@style/TextAppearance"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/textSizeDefault"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="bottom"
+                                android:orientation="horizontal">
+
+                                <EditText
+                                    android:id="@+id/loanAmt_editText"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="@dimen/marginDefault"
+                                    android:layout_weight="50"
+                                    android:backgroundTint="@color/textColor"
+                                    android:hint="@string/loan_amt"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="phone"
+                                    android:paddingBottom="@dimen/margin_small"
+                                    android:textAppearance="@style/TextAppearance"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textCursorDrawable="@drawable/custom_cursor"
+                                    android:textSize="@dimen/textSizeDefault" />
+
+                                <EditText
+                                    android:id="@+id/loanTenor_editText"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="50"
+                                    android:backgroundTint="@color/textColor"
+                                    android:hint="@string/tenure"
+                                    android:imeOptions="actionDone"
+                                    android:inputType="phone"
+                                    android:maxLines="1"
+                                    android:paddingBottom="@dimen/margin_small"
+                                    android:textAppearance="@style/TextAppearance"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textCursorDrawable="@drawable/custom_cursor"
+                                    android:textSize="@dimen/textSizeDefault" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="bottom"
+                                android:orientation="horizontal">
+
+                                <android.support.v7.widget.AppCompatSpinner
+                                    android:id="@+id/repaymentMode_spinner"
+                                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/loan_repay"
+                                    android:paddingBottom="@dimen/edtSpnrPadding"
+                                    android:paddingLeft="2dp"
+                                    android:paddingRight="2dp"
+                                    android:paddingTop="@dimen/edtSpnrPadding"
+                                    android:textAppearance="@style/TextAppearance"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="@dimen/textSizeDefault"
+                                    app:backgroundTint="@color/colorText" />
+
+                                <EditText
+                                    android:id="@+id/emiComfort_editText"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="50"
+                                    android:backgroundTint="@color/textColor"
+                                    android:hint="@string/emi_comfort"
+                                    android:inputType="textCapCharacters"
+                                    android:paddingBottom="@dimen/margin_small"
+                                    android:textAppearance="@style/TextAppearance"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textCursorDrawable="@drawable/custom_cursor"
+                                    android:textSize="@dimen/textSizeDefault"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/identificationLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/marginDefault"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:elevation="8dp"
+                        app:cardPreventCornerOverlap="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/marginDefault"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/identification_textView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/edtSpnrPadding"
+                                android:text="@string/identification_detail"
+                                android:textAppearance="@style/TextAppearance"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="@dimen/textSizeDefault"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="5"
+                                    android:drawableLeft="@drawable/ic_id_card"
+                                    android:drawablePadding="@dimen/paddingDefault"
+                                    android:gravity="center_vertical"
+                                    android:paddingTop="@dimen/edtSpnrPadding"
+                                    android:singleLine="false"
+                                    android:text="@string/pancard"
+                                    android:textAppearance="@style/TextAppearance"
+                                    android:textSize="@dimen/textSizeDefault" />
+
+                                <android.support.v7.widget.AppCompatCheckBox
+                                    android:id="@+id/pancard_checkBox"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/marginDefault"
+                                    android:button="@drawable/checkbox_custom"
+                                    android:drawablePadding="@dimen/paddingDefault"
+                                    android:theme="@style/checkBoxCustomStyle" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="5"
+                                    android:drawableLeft="@drawable/ic_id_card"
+                                    android:drawablePadding="@dimen/paddingDefault"
+                                    android:gravity="center_vertical"
+                                    android:paddingTop="5dp"
+                                    android:singleLine="false"
+                                    android:text="@string/passport"
+                                    android:textAppearance="@style/TextAppearance"
+                                    android:textSize="@dimen/textSizeDefault" />
+
+                                <android.support.v7.widget.AppCompatCheckBox
+                                    android:id="@+id/passport_checkBox"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:button="@drawable/checkbox_custom"
+                                    android:drawablePadding="@dimen/paddingDefault"
+                                    android:theme="@style/checkBoxCustomStyle" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="5"
+                                    android:drawableLeft="@drawable/ic_id_card"
+                                    android:drawablePadding="@dimen/paddingDefault"
+                                    android:gravity="center_vertical"
+                                    android:paddingTop="5dp"
+                                    android:singleLine="false"
+                                    android:text="@string/voterid"
+                                    android:textAppearance="@style/TextAppearance"
+                                    android:textSize="@dimen/textSizeDefault" />
+
+                                <android.support.v7.widget.AppCompatCheckBox
+                                    android:id="@+id/voterid_checkBox"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:button="@drawable/checkbox_custom"
+                                    android:drawablePadding="@dimen/paddingDefault"
+                                    android:theme="@style/checkBoxCustomStyle" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="5"
+                                    android:drawableLeft="@drawable/ic_id_card"
+                                    android:drawablePadding="@dimen/paddingDefault"
+                                    android:gravity="center_vertical"
+                                    android:paddingTop="5dp"
+                                    android:singleLine="false"
+                                    android:text="@string/drivinglic"
+                                    android:textAppearance="@style/TextAppearance"
+                                    android:textSize="@dimen/textSizeDefault" />
+
+                                <android.support.v7.widget.AppCompatCheckBox
+                                    android:id="@+id/drivinglic_checkBox"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:button="@drawable/checkbox_custom"
+                                    android:drawablePadding="@dimen/paddingDefault"
+                                    android:theme="@style/checkBoxCustomStyle" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="5"
+                                    android:drawableLeft="@drawable/ic_id_card"
+                                    android:drawablePadding="@dimen/paddingDefault"
+                                    android:gravity="center_vertical"
+                                    android:paddingTop="5dp"
+                                    android:singleLine="false"
+                                    android:text="@string/rationcard"
+                                    android:textAppearance="@style/TextAppearance"
+                                    android:textSize="@dimen/textSizeDefault" />
+
+                                <android.support.v7.widget.AppCompatCheckBox
+                                    android:id="@+id/rationcard_checkBox"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:button="@drawable/checkbox_custom"
+                                    android:drawablePadding="@dimen/paddingDefault"
+                                    android:theme="@style/checkBoxCustomStyle" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="@dimen/edtSpnrPadding"
+                                    android:layout_weight="5"
+                                    android:drawableLeft="@drawable/ic_id_card"
+                                    android:drawablePadding="@dimen/paddingDefault"
+                                    android:gravity="center_vertical"
+                                    android:paddingTop="5dp"
+                                    android:singleLine="false"
+                                    android:text="@string/aadharcard"
+                                    android:textAppearance="@style/TextAppearance"
+                                    android:textSize="@dimen/textSizeDefault" />
+
+                                <android.support.v7.widget.AppCompatCheckBox
+                                    android:id="@+id/aadharcard_checkBox"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:button="@drawable/checkbox_custom"
+                                    android:drawablePadding="@dimen/paddingDefault"
+                                    android:theme="@style/checkBoxCustomStyle" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|bottom"
+                    android:gravity="center|bottom"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <Button
+                        android:id="@+id/btnSave"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:layout_marginRight="@dimen/paddingDefault"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_normal"
+                        android:text="@string/save"
+                        android:textAppearance="@style/TextAppearance"
+                        android:textColor="@color/white" />
+
+                    <Button
+                        android:id="@+id/btnNext"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:layout_marginLeft="@dimen/paddingDefault"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_normal"
+                        android:text="@string/next"
+                        android:textAppearance="@style/TextAppearance"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.NestedScrollView>

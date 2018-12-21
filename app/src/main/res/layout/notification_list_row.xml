@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:id="@+id/notification_itemLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/notificationParent_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="85dp"
+            android:layout_marginLeft="@dimen/edtSpnrPadding"
+            android:layout_marginRight="@dimen/edtSpnrPadding"
+            android:orientation="horizontal">
+
+            <!--    <ImageView
+                    android:layout_marginLeft="@dimen/edtSpnrPadding"
+                    android:id="@+id/notify_productImage"
+                    android:src="@mipmap/car"
+                    android:layout_marginTop="@dimen/marginDefault"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"/>
+        -->
+            <ImageButton
+                android:id="@+id/notify_productImage"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_margin="@dimen/edtSpnrPadding"
+                android:background="@drawable/product_background_circle"
+                android:padding="@dimen/paddingDefault"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/ic_trans_bike" />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="@dimen/marginDefault"
+                android:layout_marginTop="@dimen/marginDefault"
+                android:layout_weight="75"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/notifyLeadid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/marginDefault"
+                    android:text="asdfasdfasdfasdf"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/TextAppearance"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/notifyName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/marginDefault"
+                    android:text="askjfkasdfnasdnasdf"
+                    android:textAppearance="@style/TextAppearance"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/notifyDateTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/marginDefault"
+                    android:text="askjfkasdfnasdnasdf"
+                    android:textAppearance="@style/TextAppearance"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_size_mediam" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="@dimen/margin_xxlarge"
+                android:layout_weight="20"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="22dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_information" />
+
+                <TextView
+                    android:id="@+id/notifyStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/marginDefault"
+                    android:layout_marginTop="2dp"
+                    android:text="C0"
+                    android:textAppearance="@style/TextAppearance"
+                    android:textColor="@android:color/holo_green_dark"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/notifcationView"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_below="@+id/notificationParent_layout"
+            android:layout_marginLeft="@dimen/marginDefault"
+            android:layout_marginRight="@dimen/marginDefault"
+            android:background="@drawable/line_dashed"
+            android:layerType="software" />
+
+    </RelativeLayout>
+</ScrollView>

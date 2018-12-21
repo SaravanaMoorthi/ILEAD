@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/margin_small"
+    android:orientation="vertical">
+
+    <ImageButton
+        android:id="@+id/product_imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/product_background_circle"
+        app:srcCompat="@drawable/ic_trans_bike" />
+
+    <TextView
+        android:id="@+id/product_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:ellipsize="end"
+        android:lines="2"
+        android:maxEms="7"
+        android:maxLines="2"
+        android:singleLine="false"
+        android:text="asset personal loan"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/text_size_small" />
+
+</LinearLayout>

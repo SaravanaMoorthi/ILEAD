@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/marginDefault"
+    android:layout_marginLeft="@dimen/marginDefault"
+    android:layout_marginRight="@dimen/marginDefault"
+    android:background="@color/color_bg">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtViewName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:text="@string/sample_name"
+                android:textAppearance="@style/ToolbarTheme"
+                android:textColor="@color/toolBar"
+                android:textSize="@dimen/textSizeDefault"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:background="@color/homeBG"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/txtViewLeadId"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="32dp"
+                        android:layout_weight="0.7"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="@string/sample_leadid"
+                        android:textAppearance="@style/TextAppearance"
+                        android:textColor="@color/toolBar" />
+
+                    <TextView
+                        android:id="@+id/txtViewDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:gravity="center|right"
+                        android:text="@string/sample_date"
+                        android:textAppearance="@style/TextAppearance"
+                        android:textColor="@color/toolBar" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="@dimen/paddingDefault"
+                    android:background="@color/colorBorder">
+
+                </View>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp">
+
+                    <LinearLayout
+                        android:id="@+id/item_call_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|left"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_marginLeft="10dp"
+                            android:tint="@color/toolBar"
+                            app:srcCompat="@drawable/ic_phone_call" />
+
+                        <LinearLayout
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/edtSpnrPadding"
+                            android:layout_marginTop="@dimen/edtSpnrPadding"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtViewMobile"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:maxLines="1"
+                                android:text="77098765445"
+                                android:textAppearance="@style/TextAppearance"
+                                android:textColor="@color/toolBar" />
+
+                            <View
+                                android:layout_width="80dp"
+                                android:layout_height="0.5dp"
+                                android:layout_marginLeft="5dp"
+                                android:background="@color/toolBar" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|right"
+                        android:layout_marginRight="30dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:tint="@android:color/holo_green_dark"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/ic_information" />
+
+                        <TextView
+                            android:id="@+id/leadstatus_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="7dp"
+                            android:text="@string/sample_c"
+                            android:textAppearance="@style/TextAppearance"
+                            android:textColor="@android:color/holo_green_dark"
+                            android:textSize="@dimen/text_size" />
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom|right"
+            android:background="@drawable/triangle">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="bottom|right"
+                android:layout_marginBottom="2dp"
+                android:layout_marginRight="1dp"
+                android:src="@drawable/picker" />
+        </FrameLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:background="@drawable/ic_rounded_largebtn">
+
+        <TextView
+            android:id="@+id/txtViewFirstLetter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="K"
+            android:textAppearance="@style/TextAppearance"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_lar" />
+    </FrameLayout>
+</FrameLayout>

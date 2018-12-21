@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_bg"
+    android:paddingBottom="@dimen/paddingDefault"
+    android:paddingTop="@dimen/paddingDefault">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/marginDefault"
+        android:layout_marginRight="@dimen/marginDefault"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/layoutLeadsGiven"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="2dp">
+
+            <TextView
+                android:id="@+id/name_txtViewLeadsGiven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLength="15"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="@string/nameText"
+                android:textAppearance="@style/TextAppearance"
+                android:textColor="@color/toolBar"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/paddingDefault">
+
+
+                <TextView
+                    android:id="@+id/leadstatus_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/sample_c"
+                    android:textAppearance="@style/TextAppearance"
+                    android:textColor="@android:color/holo_green_dark"
+                    android:textSize="@dimen/text_size" />
+
+                <View
+                    android:id="@+id/viewLeadsGiven"
+                    android:layout_width="1dp"
+                    android:layout_height="14dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/leadstatus_textView"
+                    android:background="@color/colorBorder" />
+
+                <TextView
+                    android:id="@+id/date_txtViewLeadsGiven"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/viewLeadsGiven"
+                    android:text="@string/sample_date"
+                    android:textAppearance="@style/TextAppearance"
+                    android:textColor="@color/toolBar" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/layoutLeadsGiven"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="@dimen/edtSpnrPadding"
+            android:background="@color/homeBG">
+
+            <TextView
+                android:id="@+id/leadid_txtViewLeadsGiven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="22dp"
+                android:layout_marginRight="@dimen/marginDefault"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:maxWidth="140dp"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="@string/sample_leadid"
+                android:textAppearance="@style/TextAppearance"
+                android:textColor="@color/toolBar"
+                app:layout_constrainedWidth="true" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/imgViewSMS"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/marginDefault"
+                android:layout_marginRight="@dimen/paddingDefault"
+                android:layout_toLeftOf="@+id/mobileLayout"
+                android:tint="@color/toolBar"
+                app:srcCompat="@drawable/ic_sms" />
+
+
+            <LinearLayout
+                android:id="@+id/mobileLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/edtSpnrPadding">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/imgViewMobile"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center"
+                    android:tint="@color/toolBar"
+                    app:srcCompat="@drawable/ic_phone_call" />
+
+                <TextView
+                    android:id="@+id/mobile_txtViewLeadsGiven"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:maxLines="1"
+                    android:text="@string/sample_mobileno"
+                    android:textAppearance="@style/TextAppearance"
+                    android:textColor="@color/toolBar" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_round"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/ic_rounded_btn"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_leadsGiven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/sample_c"
+                android:textAppearance="@style/TextAppearance"
+                android:textColor="#ffff"
+                android:textSize="@dimen/text_size_lar" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

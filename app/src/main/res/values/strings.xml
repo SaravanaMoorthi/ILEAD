@@ -1,0 +1,112 @@
+<resources>
+    <string name="appname">iLEAD</string>
+    <string name="title_activity_leads_received">LeadsReceivedActivity</string>
+    <string name="str_mobileNo">Mobile Number</string>
+    <string name="dialogCall">dialogcall</string>
+    <string name="nameText">Full Name</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing emailcompletions."</string>
+
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="username"><font size="8">Username</font></string>
+    <string name="password">Password</string>
+    <string name="forgotpassword">Forgot Password?</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_quicklead">Quick Lead</string>
+    <string name="title_leadgiven">Lead Given</string>
+    <string name="title_leadreceived">Lead Received</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_picklead">Pick Lead</string>
+
+    <string name="select_product">Select Product</string>
+    <string name="customer_name">Customer Name</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="customer_name_number">Customer Name or Mobile Number</string>
+    <string name="alter_mobile_number">Alternate Mobile.No</string>
+    <string name="pincode">Pincode</string>
+    <string name="or">OR</string>
+    <string name="state">State</string>
+    <string name="city">City</string>
+    <string name="taluk">Taluk</string>
+    <string name="sourcing">Sourcing</string>
+    <string name="sourcing_optional">Sourcing (Optional)</string>
+    <string name="direct">Direct</string>
+    <string name="channel">Channel</string>
+    <string name="submit">Submit</string>
+    <string name="next">Next</string>
+    <string name="save">Save</string>
+    <string name="tvscreditservice">TVS Credit Services</string>
+
+    <string name="customer_detail">Customer Details</string>
+    <string name="notifications">Notifications</string>
+    <string name="customer_address1">Address 1</string>
+    <string name="customer_address2">Address 2</string>
+    <string name="customer_residence">Residence Status</string>
+    <string name="vehicle_detail">Vehicle Details</string>
+    <string name="manufactured_year">Manufactured Year</string>
+    <string name="select_make">Select Make</string>
+    <string name="select_model">Select Model</string>
+    <string name="select_variant">Select Variant</string>
+    <string name="select_channel">Select Channel</string>
+    <string name="search_channel">Search Channel</string>
+
+    <string name="vehicle_finalized">Vehicle Finalized</string>
+    <string name="vehicle_regno">Vehicle Reg.No</string>
+    <string name="loan_detail">Loan Details</string>
+    <string name="loan_amt">Loan Amount</string>
+    <string name="tenure">Tenure</string>
+    <string name="loan_repay">Repayment Mode</string>
+    <string name="emi_comfort">Emi comfort</string>
+    <string name="identification_detail">Identification Details</string>
+    <string name="pancard">Pan card</string>
+    <string name="passport">Passport</string>
+    <string name="voterid">Voter ID</string>
+    <string name="drivinglic">Driving License</string>
+    <string name="rationcard">Ration Card</string>
+    <string name="aadharcard">Aadhar Card</string>
+
+    <string name="followups">Followups</string>
+    <string name="followups_action">Action</string>
+    <string name="followups_status">Status</string>
+    <string name="followups_actiondate">Action Date</string>
+    <string name="followups_actiontime">Action Time</string>
+    <string name="followups_scempno">SCE EmpNo</string>
+    <string name="followups_prospectno">Prospect No</string>
+    <string name="followups_agreementno">Agreement No</string>
+
+    <string name="followups_actioncode">Action</string>
+    <string name="followups_nacode">Next Action</string>
+    <string name="followups_resultcode">Result</string>
+    <string name="followups_nadate">Next Action Date</string>
+    <string name="followups_createdon">Created On</string>
+    <string name="followups_createdby">Created By</string>
+
+    <string name="str_call">CALL</string>
+    <string name="preLoginTxt">Pre-Login Process</string>
+    <string name="sanctionTxt">Sanction</string>
+    <string name="disbursedTxt">Disbursed</string>
+    <string name="rejectedTxt">Rejected</string>
+    <string name="followUpTxt">Followups</string>
+
+    <string name="sample_name">Kishore Kumar</string>
+    <string name="sample_leadid">DMRPAL18080000001</string>
+    <string name="sample_date">28/10/2018</string>
+    <string name="sample_c">c1</string>
+    <string name="sample_mobileno">77-8619774</string>
+    <string name="search">Search</string>
+
+    <string name="copyrights">Copyright &#169; TVS Credit Services 2018</string>
+    <string name="versioncode">Version 1.0</string>
+
+
+</resources>

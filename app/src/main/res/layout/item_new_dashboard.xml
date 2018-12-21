@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/textViewName"
+            style="@style/TextAppearance"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.4"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/paddingDefault"
+            android:text="Ramkumar"
+            android:textAlignment="textStart"
+            android:textColor="@color/toolBar"
+            tools:ignore="RtlCompat" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/imgViewCall"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.1"
+            android:background="@color/dashboard_bg"
+            android:padding="6dp"
+            android:src="@mipmap/phone" />
+
+        <TextView
+            android:id="@+id/textViewZero"
+            style="@style/TextAppearance"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.1"
+            android:gravity="center"
+            android:text="C0"
+            android:textColor="@color/colorGray" />
+
+        <TextView
+            android:id="@+id/textViewCone"
+            style="@style/TextAppearance"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.1"
+            android:background="@color/dashboard_bg"
+            android:gravity="center"
+            android:text="C1"
+            android:textColor="@color/colorGray" />
+
+        <TextView
+            android:id="@+id/textViewCtwo"
+            style="@style/TextAppearance"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.1"
+            android:gravity="center"
+            android:text="C2"
+            android:textColor="@color/colorGray" />
+
+        <TextView
+            android:id="@+id/textViewCthree"
+            style="@style/TextAppearance"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.1"
+            android:background="@color/dashboard_bg"
+            android:gravity="center"
+            android:text="C3"
+            android:textColor="@color/colorGray" />
+
+        <TextView
+            android:id="@+id/textViewCfour"
+            style="@style/TextAppearance"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.1"
+            android:gravity="center"
+            android:text="C4"
+            android:textColor="@color/colorGray" />
+
+    </LinearLayout>
+
+</LinearLayout>

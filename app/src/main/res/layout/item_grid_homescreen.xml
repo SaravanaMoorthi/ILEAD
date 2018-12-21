@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardViewDashboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/paddingDefault"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="@dimen/paddingDefault"
+        card_view:cardCornerRadius="0dp"
+        card_view:cardMaxElevation="@dimen/paddingDefault"
+        card_view:contentPadding="@dimen/paddingDefault">
+
+        <LinearLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <LinearLayout
+                android:id="@+id/circle_layout"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_legend"
+                android:gravity="center">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/imgViewDashboard"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center|center_horizontal"
+                    android:tint="@color/toolBar"
+                    card_view:srcCompat="@drawable/ic_dashboard" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/txtViewDashboard"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/imgViewDashboard"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="@string/title_dashboard"
+                android:textAppearance="@style/TextAppearance"
+                android:textColor="@color/toolBar" />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

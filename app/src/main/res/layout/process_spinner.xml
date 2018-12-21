@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/model_bg"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+        <!--  <com.github.rahatarmanahmed.cpv.CircularProgressView
+              android:id="@+id/progress_spinner"
+              android:layout_width="40dp"
+              android:layout_height="40dp"
+              app:cpv_animAutostart="true"
+              app:cpv_indeterminate="true" />-->
+        <ProgressBar
+            android:id="@+id/progress_spinner"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:indeterminate="true" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/progress_spinner"
+            android:layout_toRightOf="@+id/progress_spinner"
+            android:padding="5dp"
+            android:text="loading"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>
